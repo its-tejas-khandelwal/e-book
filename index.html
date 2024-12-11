@@ -82,6 +82,10 @@
             <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
+          <li class="navbar-item">
+            <a href="#team" class="navbar-link" data-nav-link>Our Team</a>
+          </li>
+
         </ul>
       </nav>
 
@@ -718,7 +722,7 @@
 
 
  -->
-
+ -->
 
       <!-- 
         - #ACHIEVEMENT
@@ -866,87 +870,65 @@
 
           <div class="wrapper">
 
-            <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe-CAzUqj1UWB4cUeiatkJueTi10xTSJAGXxRv09f5O8n01Gg/formResponse" method="POST">
-
-              <input type="text" name="entry.1299876013" placeholder="Your Name" required class="input-field">
-              <input type="email" name="entry.822572349" placeholder="Your Email" required class="input-field">
-              <!-- <input type="text" name="subject" placeholder="Subject" required class="input-field"> -->
-              <textarea name="entry.860908998" placeholder="Your Message" class="input-field"></textarea>
-              <center> <button type="submit" class="btn btn-primary">Send Now</button></center>
+           
+            
+                <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe-CAzUqj1UWB4cUeiatkJueTi10xTSJAGXxRv09f5O8n01Gg/formResponse" method="POST">
+                    <input type="text" name="entry.1299876013" placeholder="Your Name" required class="input-field">
+                    <input type="email" name="entry.822572349" placeholder="Your Email" required class="input-field">
+                    <textarea name="entry.860908998" placeholder="Your Message" class="input-field"></textarea>
+                    <center><button type="submit" class="btn btn-primary">Send Now</button></center>
                 </form>
-              
-                <ul class="contact-card">
-  
-                  <li>
-                    <h2 class="card-title">Our Team:</h2>
-    
-                    <address class="address:">
-                      TEJAS KHANDELWAL <br>
-                      SHREYASH PANDEY <br>
-                      UMA PANDEY <br>
-                      KUMUD JHA <br>
-                     
-                    </address>
-                  </li>
-    
-    
-                  <!-- <li>
-                    <p class="card-title">Phone:</p>
-    
-                    <a href="tel:1234567890" class="card-link">1234567890</a>
-                  </li> -->
-    
-                  <li>
-                    <p class="card-title">Email:</p>
-    
-                    <a href="mailto:support@support.com" class="card-link">khandelwaltejas2004@gmail.com</a>
-                  </li>
-    
-                  <li>
-                    <p class="social-list-title h3">Connect socials</p>
-    
-                    <ul class="social-list">
-    
-                      <li>
-                        <a href="https://www.facebook.com/" class="social-link">
-                          <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                      </li>
-    
-                      <li>
-                        <a href="https://www.twitter.com/" class="social-link">
-                          <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                      </li>
-    
-                      <li>
-                        <a href="https://www.linkedin.com/" class="social-link">
-                          <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                      </li>
-    
-                      <li>
-                        <a href="https://www.youtube.com/" class="social-link">
-                          <ion-icon name="logo-youtube"></ion-icon>
-                        </a>
-                      </li>
-    
-                      <li>
-                        <a href="https://www.whatsapp.com/" class="social-link">
-                          <ion-icon name="logo-whatsapp"></ion-icon>
-                        </a>
-                      </li>
-    
-                    </ul>
-                  </li>
-    
-                </ul>
-    
+            
+                <!-- Thank You message (hidden initially) -->
+                <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+                     <br>
+                     <br>
+                    Thank you <br>
+                 for your response!<br>
+             We will contact you shortly.<br><br>
 
+
+                </div>
+
+                
+
+            
+
+                 
+            
+                <!-- Link to external JavaScript file -->
+                <script src="script.js"></script>
+            
+              </script>
+               
+    
+                
           </div>
         </div>
 
         </div>
+      </section>
+
+      <section class="section team" id="team" aria-label="achievement">
+        <div class="container">
+
+          <!-- <p class="section-subtitle">:-</p> -->
+
+          <h2 class="h2 section-title has-underline">
+            OUR TEAM:-
+            <span class="span has-before"></span>
+          </h2>
+
+          
+          <h3 class="h3 section-title has-underline">
+            TEJAS KHANDELWAL<br>
+            SHREYASH PANDEY<br>
+          UMA PANDEY<br>
+        KUMUD JHA<br>
+            <span class="span has-before"></span>
+          </h3>
+
+          
       </section>
       </div>
 
@@ -1002,6 +984,10 @@
             <a href="#contact" class="footer-link">Contact</a>
           </li>
 
+          <li>
+            <a href="#team" class="footer-link" data-nav-link>Our Team</a>
+          </li>
+
         </ul>
 
       </div>
@@ -1027,32 +1013,7 @@
   <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Create a FormData object from the form
-        var formData = new FormData(this);
-
-        // Use fetch to submit the form data
-        fetch(this.action, {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors' // Use no-cors mode to prevent CORS issues
-        })
-        .then(function() {
-            // Show the thank you message
-            document.getElementById('thankYouMessage').style.display = 'block';
-            // Optionally, hide the form
-            document.querySelector('.contact-form form').style.display = 'none';
-        })
-        .catch(function(error) {
-            console.error('Error:', error);
-        });
-    });
-</script> 
+ 
 
 </body>
 
